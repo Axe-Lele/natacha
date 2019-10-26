@@ -29,10 +29,12 @@
     .about-div {
         display: none;
         margin: 0 auto;
+        width: 80%;
     }
     .about-title {
         color: #9d0b58;
         font-size: 26px;
+        margin-bottom: 10px;
     }
     .about-txt {
         font-size: 16px;
@@ -74,9 +76,18 @@
             $('li').click(function() {
                 switch($(this).data('index')) {
                 case 1: $('.about-div').css('display', 'block'); break;
-                case 2: break;
-                case 3: break;
-                case 4: break;
+                case 2: {
+                    $('.about-div').css('display', 'none');
+                    break;
+                }
+                case 3: {
+                    $('.about-div').css('display', 'none');
+                    break;
+                }
+                case 4: {
+                    $('.about-div').css('display', 'none');
+                    break;
+                }
                 }
             })
         }
