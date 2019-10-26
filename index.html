@@ -73,6 +73,9 @@
     .dash {
         display: inline-block;
     }
+    .book-div {
+        display: none;
+    }
 </style>
 </head>
 <body>
@@ -140,6 +143,10 @@
             <img src="images/natacha.png">
         </div>
     </div>
+    <div class="book-div">
+        <img src="images/bookpage1">
+        <img src="images/bookpage2">
+    </div>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
     var index = {
@@ -153,21 +160,25 @@
                 switch(tabIdx) {
                     case 1: {
                         $('.img-div').css('display', 'none');
+                        $('.book-div').css('display', 'none');
                         index.showAbout();
                         break;
                     }
                     case 2: {
                         $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
+                        $('.book-div').css('display', 'block');
                         break;
                     }
                     case 3: {
                         $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
+                        $('.book-div').css('display', 'none');
                         break;
                     }
                     case 4: {
                         $('.img-div').css('display', 'none');
+                        $('.book-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
                         break;
                     }
