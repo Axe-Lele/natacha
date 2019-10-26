@@ -25,6 +25,7 @@
     .img-div {
         width: fit-content;
         margin: 0px auto;
+        margin-top: 30px;
     }
     .about-div {
         display: none;
@@ -55,18 +56,23 @@
         <img src="natacha.png"/>
     </div>
     <div class="about-div">
-        <div class="about-title">
-            ABOUT MOOROOVEN
+        <div class="about-txt-div">
+            <div class="about-title">
+                ABOUT MOOROOVEN
+            </div>
+            <div class="about-txt">
+                L’auteur, Dr Natacha Moorooven, une éducatrice dans l’âme, est originaire de l’île Maurice.
+                Elle a passé les vingt dernières années de sa vie en Afrique, en Amérique et en Asie. Elle est titulaire d’une licence en Gestion de l’information et en Théologie, d’une Maîtrise en Religion et en Ethique, et d’un doctorat en Relations internationales.
+                Elle a servi comme pasteur stagiaire et directrice de La Voix de l’espérance, à l’île Maurice. Elle a ensuite rejoint l‘Adventist Volunteer Service de la Conférence générale, à Maryland, aux États-Unis. À ce titre, elle est missionnaire pour deux Églises adventistes sud-coréennes et pour les immigrants illégaux— victimes d’’exploitation sexuelle.
+                Trois ans plus tard, elle a travaillé pour le département des communications de la Conférence générale, aux États-Unis. Peu de temps après, elle a obtenu une bourse pour un doctorat en Relations internationales, à l’université Sogang, de Séoul. Elle a complété son doctorat en 2013 et a été embauchée aussitôt comme professeure adjointe à l’université Gyeongju, puis, depuis mars 2014, à l’université Yongin. 
+                Cet ouvrage est le fruit de sa passion et de ses expériences acquises au fil des années.
+            </div>
         </div>
-        <div class="about-txt">
-            L’auteur, Dr Natacha Moorooven, une éducatrice dans l’âme, est originaire de l’île Maurice.
-            Elle a passé les vingt dernières années de sa vie en Afrique, en Amérique et en Asie. Elle est titulaire d’une licence en Gestion de l’information et en Théologie, d’une Maîtrise en Religion et en Ethique, et d’un doctorat en Relations internationales.
-            Elle a servi comme pasteur stagiaire et directrice de La Voix de l’espérance, à l’île Maurice. Elle a ensuite rejoint l‘Adventist Volunteer Service de la Conférence générale, à Maryland, aux États-Unis. À ce titre, elle est missionnaire pour deux Églises adventistes sud-coréennes et pour les immigrants illégaux— victimes d’’exploitation sexuelle.
-            Trois ans plus tard, elle a travaillé pour le département des communications de la Conférence générale, aux États-Unis. Peu de temps après, elle a obtenu une bourse pour un doctorat en Relations internationales, à l’université Sogang, de Séoul. Elle a complété son doctorat en 2013 et a été embauchée aussitôt comme professeure adjointe à l’université Gyeongju, puis, depuis mars 2014, à l’université Yongin. 
-            Cet ouvrage est le fruit de sa passion et de ses expériences acquises au fil des années.
-        
+        <div class="about-img-div">
+            <img src="natacha.png">
         </div>
     </div>
+    
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
     var index = {
@@ -76,8 +82,13 @@
         event : function() {
             $('li').click(function() {
                 switch($(this).data('index')) {
-                case 1: $('.about-div').css('display', 'block'); break;
+                case 1: {
+                    $('.img-div').css('display', 'none');
+                    $('.about-div').css('display', 'block');
+                    break;
+                }
                 case 2: {
+                    
                     $('.about-div').css('display', 'none');
                     break;
                 }
