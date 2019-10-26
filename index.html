@@ -107,10 +107,10 @@
             <img src="images/natacha.png"/>
         </div>
     </div>
-    <div class="about-div">
+    <div class="about-div french">
         <div class="about-txt-div">
             <div class="about-title">
-                ABOUT MOOROOVEN
+                ABOUT NATACHA
             </div>
             <div class="about-txt">
                 L’auteur, Dr Natacha Moorooven, une éducatrice dans l’âme, est originaire de l’île Maurice.
@@ -124,7 +124,22 @@
             <img src="images/natacha.png">
         </div>
     </div>
-    
+    <div class="about-div english">
+        <div class="about-txt-div">
+            <div class="about-title">
+                ABOUT MOOROOVEN
+            </div>
+            <div class="about-txt">
+                The author, Dr Natacha Moorooven, an educator at heart, hails from Mauritius. She spent the last twenty years of her life in Africa, America and Asia. She holds a bachelor’s degree in Information Management and Theology, a master’s degree in Religion and Ethics, and a PhD in International Relations.
+                She has served as an intern pastor and as the director of the Voice of Hope in Mauritius. She then joined the Adventist Volunteer Service at the General Conference in Maryland, United States. In this capacity, she is a missionary for two South Korean Adventist churches and for illegal immigrants—victims of sexual exploitation. Three years later, she worked for the Communications Department of the General Conference in the United States.
+                In spring of 2008, she obtained a scholarship for a Ph.D. in International Relations at Sogang University, in Seoul. She completed her PhD in 2013 and was hired right away as an Assistant Professor at Gyeongju University, then in March 2014, at Yongin University.
+                This inspirational book is simply the result of her passion and the experiences she has acquired over the years.
+            </div>
+        </div>
+        <div class="about-img-div">
+            <img src="images/natacha.png">
+        </div>
+    </div>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
     var index = {
@@ -136,7 +151,7 @@
                 switch($(this).data('index')) {
                     case 1: {
                         $('.img-div').css('display', 'none');
-                        $('.about-div').css('display', 'block');
+                        $('.about-div.active').css('display', 'block');
                         break;
                     }
                     case 2: {
@@ -168,7 +183,13 @@
                 $('.about-div').css('display', 'block');
             });
             $('#selectLanguage').change(function() {
-                $('#language').val($('#selectLanguage').val() == 'french' ? 'french' : 'english')
+                if($('#selectLanguage').val() == 'french') {
+                    $('.french').addClass('active');
+                    $('.english').removeClass('active');
+                } else {
+                    $('.french').removeClass('active');
+                    $('.english').addClass('active');
+                }
             })
         }
     }
