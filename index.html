@@ -31,10 +31,10 @@
 <body>
     <div class="title">Natacha Moorooven</div>
     <ul>
-        <li>ABOUT</li>
-        <li>BOOK</li>
-        <li>BLOG</li>
-        <li>GIVEAWAY</li>
+        <li data-index="1">ABOUT</li>
+        <li data-index="2">BOOK</li>
+        <li data-index="3">BLOG</li>
+        <li data-index="4">GIVEAWAY</li>
     </ul>
     <div class="img-div">
         <img src="image.png"/>
@@ -47,7 +47,12 @@
         },
         event : function() {
             $('li').click(function() {
-                alert($('li'));
+                switch($(this).data('index')) {
+                case 1: break;
+                case 2: break;
+                case 3: break;
+                case 4: break;
+                }
             })
         }
     }
