@@ -4,9 +4,13 @@
 <meta charset="UTF-8">
 <title>Natacha Moorooven</title>
 <style>
+    .language-div {
+        text-align: center;
+        margin-top: 20px;
+    }
     .category {
         display:inline-block;
-        width: 200px;
+        width: 150px;
         cursor: pointer;
         text-align: center;
     }
@@ -163,6 +167,9 @@
                 $('.img-div').css('display', 'none');
                 $('.about-div').css('display', 'block');
             });
+            $('#selectLanguage').change(function() {
+                $('#language').val($('#selectLanguage').val() == 'french' ? 'french' : 'english')
+            })
         }
     }
     $(function() {
