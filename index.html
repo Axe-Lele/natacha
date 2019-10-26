@@ -43,7 +43,7 @@
     <script>
     var index = {
         init : function() {
-            
+            index.event();
         },
         event : function() {
             $('li').click(function() {
@@ -52,7 +52,7 @@
         }
     }
     $(function() {
-        
+        index.init();
     });
     </script>
 </body>
