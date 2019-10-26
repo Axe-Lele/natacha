@@ -80,6 +80,16 @@
         display: block;
         margin: 0px auto;
     }
+    .contact-div {
+        display: none;
+    }
+    .contact-div img{
+        display: block;
+        margin: 0px auto;
+    }
+    body {
+        background-image: url(images/bookcover.png);
+    }
 </style>
 </head>
 <body>
@@ -151,6 +161,12 @@
         <img src="images/bookpage1.png">
         <img src="images/bookpage2.png">
     </div>
+    <div class="blog-div">
+        <img src="images/emailpng">
+    </div>
+    <div class="contact-div">
+        <img src="images/emailpng">
+    </div>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
     var index = {
@@ -165,6 +181,7 @@
                     case 1: {
                         $('.img-div').css('display', 'none');
                         $('.book-div').css('display', 'none');
+                        $('.contact-div').css('display', 'none');
                         index.showAbout();
                         break;
                     }
@@ -172,18 +189,21 @@
                         $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
                         $('.book-div').css('display', 'block');
+                        $('.contact-div').css('display', 'none');
                         break;
                     }
                     case 3: {
                         $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
                         $('.book-div').css('display', 'none');
+                        $('.contact-div').css('display', 'none');
                         break;
                     }
                     case 4: {
                         $('.img-div').css('display', 'none');
                         $('.book-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
+                        $('.contact-div').css('display', 'block');
                         break;
                     }
                 }
