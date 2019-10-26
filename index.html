@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <title>Natacha Moorooven</title>
 <style>
-    li {
+    .category {
         display:inline-block;
         width: 200px;
         cursor: pointer;
     }
     
-    ul {
+    .category-div {
         width: fit-content;
         margin: 0px auto;
         margin-top: 30px;
@@ -72,12 +72,15 @@
         <img src="images/drnatacha.png">
         <img class="author-img" src="images/author.png">
     </div>
-    <ul>
-        <li data-index="1"><img src="images/about.png"></li>
-        <li data-index="2"><img src="images/book.png"></li>
-        <li data-index="3"><img src="images/blog.png"></li>
-        <li data-index="4"><img src="images/contact.png"></li>
-    </ul>
+    <div class="category-div">
+        <div class="category" data-index="1"><img src="images/about.png"></div>
+        <div class="dash"><img src="images/dash.png"></div>
+        <div class="category" data-index="2"><img src="images/book.png"></div>
+        <div class="dash"><img src="images/dash.png"></div>
+        <div class="category" data-index="3"><img src="images/blog.png"></div>
+        <div class="dash"><img src="images/dash.png"></div>
+        <div class="category" data-index="4"><img src="images/contact.png"></div>
+    </div>
     <div class="img-div">
         <div class="book-img-div">
             <div>- ABOUT BOOK -</div>
@@ -113,7 +116,7 @@
             index.event();
         },
         event : function() {
-            $('li').click(function() {
+            $('.category-div .category').click(function() {
                 switch($(this).data('index')) {
                     case 1: {
                         $('.img-div').css('display', 'none');
