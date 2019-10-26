@@ -76,14 +76,14 @@
 </style>
 </head>
 <body>
+    <input type="hidden" id="curTab">
     <div class="title">
         <img src="images/drnatacha.png">
         <img class="author-img" src="images/author.png">
     </div>
     <div class="language-div">
-        <input type="hidden" id="language" value="english">
         <select id="selectLanguage">
-            <option value="" disabled selected>Select the language</option>
+            <option value="english" disabled selected>Select the language</option>
             <option value="english">English</option>
             <option value="french">French</option>
         </select>
@@ -148,10 +148,12 @@
         },
         event : function() {
             $('.category-div .category').click(function() {
-                switch($(this).data('index')) {
+                var tabIdx = $(this).data('index');
+                $('#curTab').val(tabIdx)
+                switch(tabIdx) {
                     case 1: {
                         $('.img-div').css('display', 'none');
-                        $('.about-div.active').css('display', 'block');
+                        index.showAbout();
                         break;
                     }
                     case 2: {
@@ -183,14 +185,21 @@
                 $('.about-div').css('display', 'block');
             });
             $('#selectLanguage').change(function() {
-                if($('#selectLanguage').val() == 'french') {
-                    $('.french').addClass('active');
-                    $('.english').removeClass('active');
-                } else {
-                    $('.french').removeClass('active');
-                    $('.english').addClass('active');
+                switch($('#curTab').val()) {
+                case 1: index.showAbout(); break;
+                case 2: break;
+                case 3: break;
+                case 4: break;
                 }
             })
+        },
+        showAbout : function() {
+            $('.about-div').css('display', 'none');
+            if($('#selectLanguage').val() == 'english') {
+                $('.about-div.english').css('display', 'block');
+            } else {
+                $('.about-div.french').css('display', 'block');
+            }
         }
     }
     $(function() {
