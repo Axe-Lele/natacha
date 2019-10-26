@@ -32,7 +32,7 @@
     }
     .about-div {
         display:none;
-        margin: 0 auto;
+        margin: 30px 10% 0% 25%;
         margin-top: 30px;
         width: 80%;
     }
@@ -67,7 +67,9 @@
 </style>
 </head>
 <body>
-    <div class="title">Natacha Moorooven</div>
+    <div class="title">
+        <img src="natachamoorooven.png">
+    </div>
     <ul>
         <li data-index="1">ABOUT</li>
         <li data-index="2">BOOK</li>
@@ -117,15 +119,17 @@
                         break;
                     }
                     case 2: {
-                        
+                        $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
                         break;
                     }
                     case 3: {
+                        $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
                         break;
                     }
                     case 4: {
+                        $('.img-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
                         break;
                     }
@@ -135,7 +139,7 @@
                 location.reload();
             });
             $('.book-img-div img').click(function() {
-
+                $('.img-div').css('display', 'none');
                 $('.about-div').css('display', 'none');
             });
             $('.natacha-img-div img').click(function() {
