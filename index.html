@@ -16,6 +16,7 @@
         margin-top: 30px;
     }
     .title {
+        display: grid;
         margin: 0px auto;
         width: fit-content;
         cursor: pointer;
@@ -60,12 +61,16 @@
     .book-img-div img, .natacha-img-div img {
         cursor: pointer;
     }
+    
+    .author-img {
+        margin-left: 100px;
+    }
 </style>
 </head>
 <body>
     <div class="title">
         <img src="images/drnatacha.png">
-        <img src="images/author.png">
+        <img class="author-img" src="images/author.png">
     </div>
     <ul>
         <li data-index="1">ABOUT</li>
