@@ -233,6 +233,7 @@
                         $('.book-div').css('display', 'none');
                         $('.contact-div').css('display', 'none');
                         $('.blog-div').css('display', 'block');
+                        index.showTrailer();
                         break;
                     }
                     case 4: {
@@ -262,7 +263,7 @@
                 switch($('#curTab').val()) {
                 case '1': index.showAbout(); break;
                 case '2':  break;
-                case '3': break;
+                case '3': index.showTrailer(); break;
                 case '4': index.showContact(); break;
                 }
             })
