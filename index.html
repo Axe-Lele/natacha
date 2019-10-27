@@ -165,7 +165,7 @@
         <img src="images/bookpage2.png">
     </div>
     <div class="blog-div">
-        <video src="video/video.mp4" autoplay loop></video>
+        <video id="video" src="video/video.mp4" autoplay controls></video>
     </div>
     <div class="contact-div">
         <img src="images/email.png">
@@ -186,6 +186,7 @@
                         $('.book-div').css('display', 'none');
                         $('.contact-div').css('display', 'none');
                         $('.blog-div').css('display', 'none');
+                        $('#video').pause();
                         index.showAbout();
                         break;
                     }
@@ -195,6 +196,7 @@
                         $('.book-div').css('display', 'block');
                         $('.contact-div').css('display', 'none');
                         $('.blog-div').css('display', 'none');
+                        $('#video').pause();
                         break;
                     }
                     case 3: {
@@ -211,6 +213,7 @@
                         $('.about-div').css('display', 'none');
                         $('.contact-div').css('display', 'block');
                         $('.blog-div').css('display', 'none');
+                        $('#video').pause();
                         break;
                     }
                 }
