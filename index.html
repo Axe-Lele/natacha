@@ -89,6 +89,7 @@
     }
     .blog-div {
         display: none;
+        text-align: center;
     }
     body {
         /* background-image: url(images/bookcover.png); */
@@ -103,19 +104,28 @@
     </div>
     <div class="language-div">
         <select id="selectLanguage">
-            <option value="english" disabled selected>Select the language</option>
+            <option disabled selected>Select the language</option>
             <option value="english">English</option>
             <option value="french">French</option>
         </select>
     </div>
-    <div class="category-div">
-        <div class="category" data-index="1"><img src="images/about.png"></div>
+    <div class="category-div english">
+        <div class="category" data-index="1"><img src="images/english/about.png"></div>
         <div class="dash"><img src="images/dash.png"></div>
-        <div class="category" data-index="2"><img src="images/book.png"></div>
+        <div class="category" data-index="2"><img src="images/english/book.png"></div>
         <div class="dash"><img src="images/dash.png"></div>
-        <div class="category" data-index="3"><img src="images/blog.png"></div>
+        <div class="category" data-index="3"><img src="images/english/blog.png"></div>
         <div class="dash"><img src="images/dash.png"></div>
-        <div class="category" data-index="4"><img src="images/contact.png"></div>
+        <div class="category" data-index="4"><img src="images/english/contact.png"></div>
+    </div>
+    <div class="category-div french">
+        <div class="category" data-index="1"><img src="images/french/about.png"></div>
+        <div class="dash"><img src="images/dash.png"></div>
+        <div class="category" data-index="2"><img src="images/french/book.png"></div>
+        <div class="dash"><img src="images/dash.png"></div>
+        <div class="category" data-index="3"><img src="images/french/blog.png"></div>
+        <div class="dash"><img src="images/dash.png"></div>
+        <div class="category" data-index="4"><img src="images/french/contact.png"></div>
     </div>
     <div class="img-div">
         <div class="book-img-div">
@@ -165,7 +175,7 @@
         <img src="images/bookpage2.png">
     </div>
     <div class="blog-div">
-        <video id="video" src="video/video.mp4" autoplay controls></video>
+        <video id="video" src="video/video.mp4" controls></video>
     </div>
     <div class="contact-div english">
         <img src="images/email_english.png">
@@ -233,6 +243,7 @@
                 $('.about-div').css('display', 'block');
             });
             $('#selectLanguage').change(function() {
+                index.showCategory();
                 switch($('#curTab').val()) {
                 case '1': index.showAbout(); break;
                 case '2':  break;
@@ -255,6 +266,14 @@
                 $('.contact-div.english').css('display', 'block');
             } else {
                 $('.contact-div.french').css('display', 'block');
+            }
+        },
+        showCategory : function() {
+            $('.category-div').css('display', 'none');
+            if($('#selectLanguage').val() == 'english') {
+                $('.category-div.english').css('display', 'block');
+            } else {
+                $('.category-div.french').css('display', 'block');
             }
         }
     }
