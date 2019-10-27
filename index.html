@@ -189,7 +189,7 @@
                         $('.book-div').css('display', 'none');
                         $('.contact-div').css('display', 'none');
                         $('.blog-div').css('display', 'none');
-                        $('#video').pause();
+                        $('#video').get(0).pause()
                         index.showAbout();
                         break;
                     }
@@ -199,7 +199,7 @@
                         $('.book-div').css('display', 'block');
                         $('.contact-div').css('display', 'none');
                         $('.blog-div').css('display', 'none');
-                        $('#video').pause();
+                        $('#video').get(0).pause()
                         break;
                     }
                     case 3: {
@@ -216,7 +216,7 @@
                         $('.about-div').css('display', 'none');
                         $('.blog-div').css('display', 'none');
                         index.showContact();
-                        $('#video').pause();
+                        $('#video').get(0).pause()
                         break;
                     }
                 }
@@ -235,9 +235,9 @@
             $('#selectLanguage').change(function() {
                 switch($('#curTab').val()) {
                 case '1': index.showAbout(); break;
-                case '2': index.showContact(); break;
+                case '2':  break;
                 case '3': break;
-                case '4': break;
+                case '4': index.showContact(); break;
                 }
             })
         },
