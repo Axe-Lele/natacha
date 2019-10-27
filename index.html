@@ -167,8 +167,11 @@
     <div class="blog-div">
         <video id="video" src="video/video.mp4" autoplay controls></video>
     </div>
-    <div class="contact-div">
-        <img src="images/email.png">
+    <div class="contact-div english">
+        <img src="images/email_english.png">
+    </div>
+    <div class="contact-div french">
+        <img src="images/email_french.png">
     </div>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
@@ -211,8 +214,8 @@
                         $('.img-div').css('display', 'none');
                         $('.book-div').css('display', 'none');
                         $('.about-div').css('display', 'none');
-                        $('.contact-div').css('display', 'block');
                         $('.blog-div').css('display', 'none');
+                        index.showContact();
                         $('#video').pause();
                         break;
                     }
@@ -232,7 +235,7 @@
             $('#selectLanguage').change(function() {
                 switch($('#curTab').val()) {
                 case '1': index.showAbout(); break;
-                case '2': break;
+                case '2': index.showContact(); break;
                 case '3': break;
                 case '4': break;
                 }
@@ -244,6 +247,14 @@
                 $('.about-div.english').css('display', 'block');
             } else {
                 $('.about-div.french').css('display', 'block');
+            }
+        },
+        showContact : function() {
+            $('.contact-div').css('display', 'none');
+            if($('#selectLanguage').val() == 'english') {
+                $('.contact-div.english').css('display', 'block');
+            } else {
+                $('.contact-div.french').css('display', 'block');
             }
         }
     }
