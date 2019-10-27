@@ -93,6 +93,13 @@
         display: none;
         text-align: center;
     }
+    
+    .trailer {
+        font-size: 20px;
+        font-weight: bold;
+        color: #255934;
+        display: none;
+    }
     body {
         /* background-image: url(images/bookcover.png); */
     }
@@ -176,7 +183,13 @@
         <img src="images/common/bookpage1.png">
         <img src="images/common/bookpage2.png">
     </div>
-    <div class="blog-div">
+    <div class="trailer-div">
+        <div class="trailer french">
+            <img src="images/common/dash_green">Bande-Annonce
+        </div>
+        <div class="trailer english">
+            <img src="images/common/dash_green">Book Trailer
+        </div>
         <video id="video" src="video/video.mp4" controls></video>
     </div>
     <div class="contact-div english">
@@ -276,6 +289,14 @@
                 $('.category-div.english').css('display', 'block');
             } else {
                 $('.category-div.french').css('display', 'block');
+            }
+        },
+        showTrailer : function() {
+            $('.trailer').css('display', 'none');
+            if($('#selectLanguage').val() == 'english') {
+                $('.trailer.english').css('display', 'block');
+            } else {
+                $('.trailer.french').css('display', 'block');
             }
         }
     }
